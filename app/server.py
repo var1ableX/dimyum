@@ -9,10 +9,21 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
-export_file_name = 'export.pkl'
+export_file_url = 'https://mldatarok.s3.amazonaws.com/models/dimsum.pkl'
+export_file_name = 'dimsum.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+classes = ['Chicken Feet',
+  'Egg Tart',
+  'Radish Cakes',
+  'Rice Noodle Rolls',
+  'Sesame Ball',
+  'Shao Mai',
+  'Shrimp Dumplings',
+  'Sponge Cake',
+  'Spring Roll',
+  'Steamed Pork Buns',
+  'Sticky Rice in Lotus Leaf']
+
 path = Path(__file__).parent
 
 app = Starlette()
